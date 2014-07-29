@@ -1,0 +1,62 @@
+body {
+	background-color: #f9f9f9;
+	font-family: Arial, Helvetica, Verdana;
+	font-size: 14px;
+	line-height: 22px;
+	color: #333;
+	position: relative;
+	-webkit-text-size-adjust: none;
+}
+a,
+a:visited {
+	color: $linkColor;
+}
+a:hover {
+	color: $linkHoverColor;
+}
+
+::-moz-selection {
+    background: $selectionColor;
+    text-shadow: none;
+}
+
+::selection {
+    background: $selectionColor;
+    text-shadow: none;
+}
+
+h1, h2, h3, h4 {
+	font-weight: normal;
+	margin: 0 0 10px 0;
+}
+
+.wrapper {
+	max-width: $pageWidth;
+	margin:0 auto;
+}
+#page nav {
+	display: none;
+}
+header .trigger {
+	position: absolute;
+	top:em(10);
+	left: 10px;
+	display: block;
+	color:#fff;
+	width:40px;
+	height:20px;
+	background:url(#{$assetPath}/icons/menu-icon.svg) no-repeat top left;
+	outline:none;
+}
+
+
+header {
+	background: #555;
+	font-size: 16px;
+	font-weight: bold;
+	color: #fff;
+	text-align: center;
+	line-height: 40px;
+	height: 40px;
+	padding: 0 50px;
+}
