@@ -2,3 +2,4 @@
 node_modules
 .sass-cache
 wp-config.php
+temp

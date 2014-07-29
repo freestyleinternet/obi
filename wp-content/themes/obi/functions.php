@@ -26,6 +26,11 @@ Misc Theme Functions
 *****************************************/
 
 /**
+ * Hide Admin bar on front-end
+ */
+show_admin_bar( false );
+
+/**
  * Define custom post type capabilities for use with Members
  */
 function mb_add_post_type_caps() {

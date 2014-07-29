@@ -1,3 +1,11 @@
+* {
+	margin:0; 
+	padding: 0;
+}
+html, body {
+height:100%;
+}
+
 body {
 	background-color: #f9f9f9;
 	font-family: Arial, Helvetica, Verdana;
@@ -29,34 +37,91 @@ h1, h2, h3, h4 {
 	font-weight: normal;
 	margin: 0 0 10px 0;
 }
+nav, ul {
+	margin:0;
+	padding:0;
+	list-style:none;
+}
 
 .wrapper {
 	max-width: $pageWidth;
 	margin:0 auto;
 }
-#page nav {
-	display: none;
-}
-header .trigger {
-	position: absolute;
-	top:em(10);
-	left: 10px;
-	display: block;
-	color:#fff;
-	width:40px;
-	height:20px;
-	background:url(#{$assetPath}/icons/menu-icon.svg) no-repeat top left;
-	outline:none;
-}
-
 
 header {
-	background: #555;
-	font-size: 16px;
-	font-weight: bold;
-	color: #fff;
-	text-align: center;
-	line-height: 40px;
-	height: 40px;
-	padding: 0 50px;
+	position:relative;  
+	width:100%; 
+	float:left; 
+	top:0; /* set for sticky header */ 
+	padding:em(10) 0;
+	background-color:#fff;
+	z-index:9999;
 }
+.fixed { 
+	position:fixed;
+}
+
+.logo {
+	float:left;
+	width:140px;
+	height:70px;
+	background-image:url(#{$assetPath}/obi_logo.png);
+}
+
+/** format elements which have backgrounds parallax **/
+.bgParallax {
+	margin: 0 auto;
+	width: 100%;
+	max-width:100%;
+	position: relative;
+	min-height:584px;
+	background-position:center top;
+	background-repeat:repeat;
+	background-attachment: fixed;	
+} 
+
+#welcome {
+	background-image:url(#{$assetPath}/banner1.jpg);
+	section {
+		min-height:584px;
+	}
+}
+#services {
+	min-height:1328px;
+	background-color:#fff;
+	section {
+		min-height:1328px;
+	}
+}
+#about {
+	min-height:645px;
+	background-image:url(#{$assetPath}/banner2.jpg);
+	section {
+		min-height:645px;
+	}
+}
+#work-with-us {
+	min-height:318px;
+	background-color:#4f1929;
+	section {
+		min-height:318px;
+	}
+}
+#contact {
+	background-image:url(#{$assetPath}/banner3.jpg);
+	section {
+		min-height:584px;
+	}
+}
+.bgParallax section {
+	display:block;
+	width: 100%;
+	text-align: center;
+	margin:0 auto;
+	padding:0;
+}
+
+
+
+
+

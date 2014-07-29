@@ -1,5 +1,3 @@
-nav#menu {
-	@include bp(tablet) {
-				
-	}
+nav#menu ul {
+	float:right;
 }
