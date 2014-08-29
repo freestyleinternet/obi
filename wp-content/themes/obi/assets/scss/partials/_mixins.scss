@@ -3,6 +3,12 @@
  * @include bp(tablet) { SCSS here };
 */
 @mixin bp($point) {
+	@if $point == desktoplarge {
+		@media (min-width : 1040px) { @content; }
+	}
+	@if $point == desktoplarge {
+		@media (min-width : 1025px) { @content; }
+	}
 	@if $point == desktop {
 		@media (min-width : 960px) { @content; }
 	}

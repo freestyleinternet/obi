@@ -1,15 +1,71 @@
-/* FORMS */
+body .gform_wrapper {
+	margin-left:2px;
+}
+body .gform_wrapper .gform_body .gform_fields .gfield input[type=text],
+body .gform_wrapper .gform_body .gform_fields .gfield input[type=email] {
+	min-height:40px;
+}
+body .gform_wrapper .gform_body .gform_fields .gfield input[type=text],
+body .gform_wrapper .gform_body .gform_fields .gfield input[type=email],
+body .gform_wrapper .gform_body .gform_fields .gfield textarea {
+	width:100%;
+	border:none;
+	padding:em(10) em(10);
+	margin-bottom:em(23);
+	@include placeholder {
+		font-size:15px;
+	}
+}
+body .gform_wrapper .gform_body .gform_fields .gfield textarea {
+	height:135px;
+}
+body .gform_wrapper .gform_footer input[type=submit] {
+	display:block;
+	margin:0 auto;
+	border:none;
+	color:#fff;
+	font-size:em(18);
+	padding:em(10) em(20) em(9) em(20);
+	background:$brand-two;
+	&:hover {
+		color:$brand-two;
+		background:#63666a;
+	}
+}
 
-form { }
+body .gform_wrapper .gform_body .gform_fields .gf_left_half {
+	float:left;
+	width:100%;
+	@include bp(tablet) {
+		width:47%;		
+	}
+}
+body .gform_wrapper .gform_body .gform_fields .gf_right_half {
+	float:right;
+	width:100%;
+	@include bp(tablet) {
+		width:47%;		
+	}
+}
 
-/* Gravity Forms */
+body .gform_wrapper .gform_heading .gform_title {
+	font-size:em(30);
+	margin-top:em(35);
+	margin-bottom:em(5);
+	font-family: "arno-pro",serif;
+}
 
-.gform_wrapper { }
-.gform_heading { }
-.gform_description { }
-.gform_body { }
-.gform_fields { }
-.gfield { }
-.ginput_container { }
-.gform_footer { }
-.gform_button { }
+body .gform_wrapper .validation_error {
+	display:none;
+}
+body .gform_wrapper .gform_body .gform_fields .gfield_error {
+	position:relative;
+}
+body .gform_wrapper .gform_body .gform_fields .gfield_error .validation_message {
+	position:absolute;
+	bottom:0;
+	left:0;
+	font-size:em(11.5);
+	color:$brand-one;
+	padding-bottom:3px;
+}

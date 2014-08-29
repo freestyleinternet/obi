@@ -2,10 +2,14 @@
 // @include fontface('FONT_NAME', 'assets/fonts/', 'FONT_FAMILY');
 
 // Structure
-$pageWidth: 1000px;
+$pageWidth: 980px;
 
 // Text Selection
 $selectionColor: orange;
+
+$brand-one:#9f2842;
+$brand-two:#f7a800;
+$brand-three:#63666a;
 
 // Links
 $linkColor: red;
@@ -14,3 +18,32 @@ $linkHoverColor: blue;
 // Path to images
 // Use #{$assetPath}/
 $assetPath : "assets/images";
+
+/* Make Keyframes */
+@include keyframes(fadeInFromTopWelcome) {
+  from {
+	opacity:0; 
+  }
+  to {
+	opacity:1;
+  }
+}
+@include keyframes(fadeInFromTop) {
+  from {
+	top:0;
+	opacity:0; 
+  }
+  to {
+	opacity:1;
+	top:10px;
+  }
+}
+@include keyframes(scaleUp) {
+  from {
+    @include transform(scale(0));
+  }
+  to {
+    @include transform(scale(1));
+  }
+}
+

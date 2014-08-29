@@ -1,3 +1,54 @@
 nav#menu ul {
+	clear:right;
 	float:right;
+	width:100%;	
+	margin-top:em(15);
+	margin-bottom:em(5);
+	@include bp(tablet) {
+		width:auto;
+		margin-top:0;
+	}
+	li {
+		display:inline;
+		a {
+			display:block;
+			background:$brand-one;
+			color:#fff;
+			font-size:em(18); 
+			line-height: 24px;
+			font-weight: 300;
+			padding:em(5) 0;
+			border-bottom:1px solid #fff;
+			text-align:center;
+			@include bp(tablet) {
+				width:auto;
+				color: $brand-one;
+				margin:0;
+				text-align:left;
+				padding:0 em(13);
+				display:inline-block;
+				border-bottom:4px dotted #fff;
+				background:none;
+				&:hover {
+					color:#701c2e;
+				}
+			}
+			
+		}
+		a::after {
+    display:block;
+    content:attr(title);
+    font-weight:bold;
+    height:1px;
+    color:transparent;
+    overflow:hidden;
+    visibility:hidden;
+}
+		&:first-child a {
+			padding-left:0;
+		}
+		&:last-child a {
+			padding-right:0;
+		}
+	}
 }
